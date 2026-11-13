@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muzammil & Muskan | Royal Wedding Invitation</title>
+    <!-- WhatsApp Preview Tags -->
+    <meta
+      property="og:title"
+      content="Wedding Invitation | Muzammil Khan & Muskan Saiyed"
+    />
+    <meta
+      property="og:description"
+      content="10th December 2026 • You are cordially invited with family to celebrate our special day."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Cinematic Blackout Transition Overlay -->
+    <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+
+    <!-- Background Sparkles & Flowers -->
+    <canvas id="sparkleCanvas"></canvas>
+    <div id="petals-container"></div>
+
+    <!-- ================= STAGE 1: 3D ENVELOPE ================= -->
+    <section class="screen-page stage-envelope" id="stageEnvelope">
+      <div class="envelope-box" id="envelopeBox">
+        <div class="env-back"></div>
+        <div class="env-letter">
+          <p class="env-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+          <h3>Royal Wedding Invitation</h3>
+          <span>Muzammil & Muskan</span>
+        </div>
+        <div class="env-flap-left"></div>
+        <div class="env-flap-right"></div>
+        <div class="env-flap-bottom"></div>
+        <div class="env-flap-top"></div>
+
+        <button class="wax-seal-btn" onclick="startStorySequence()">
+          <span class="seal-initials">M & M</span>
+          <span class="seal-sub">OPEN INVITATION</span>
+        </button>
+      </div>
+      <p class="hint-text">Tap the Golden Seal to Open Envelope</p>
+    </section>
+
+    <!-- ================= STAGE 2: PALACE DOORS ================= -->
+    <section class="screen-page stage-doors" id="stageDoors">
+      <div class="door left-door">
+        <div class="door-design">
+          <div class="door-arch"></div>
+          <span class="door-monogram">M</span>
+        </div>
+      </div>
+      <div class="door right-door">
+        <div class="door-design">
+          <div class="door-arch"></div>
+          <span class="door-monogram">M</span>
+        </div>
+      </div>
+      <div class="door-banner">
+        <h2>Welcome to the Royal Celebration</h2>
+      </div>
+    </section>
+
+    <!-- ================= STAGE 3: FULL WEBSITE PAGES (SNAP CONTAINER) ================= -->
+    <div class="website-snap-container" id="websiteContainer">
+      <!-- PAGE 1: GROOM & BRIDE -->
+      <section class="snap-page" id="page1">
+        <div class="arch-card page-card">
+          <div class="bismillah-header">
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+          </div>
+          <div class="gold-line"><span></span> ❖ <span></span></div>
+          <p class="sub-caps">
+            TOGETHER WITH THEIR FAMILIES<br />YOU ARE JOYFULLY INVITED TO THE
+            WEDDING OF
+          </p>
+
+          <div class="couple-showcase">
+            <div class="person-card">
+              <span class="tag">GROOM</span>
+              <h1 class="script-name">Muzammil Khan</h1>
+              <p class="parent-line">S/O NOOR KHAN LATIF KHAN PATHAN</p>
+            </div>
+            <div class="ring-circle">&amp;</div>
+            <div class="person-card">
+              <span class="tag">BRIDE</span>
+              <h1 class="script-name">Muskan Saiyed</h1>
+              <p class="parent-line">D/O YUNUS ALI MOHAMMAD ALI SAIYAD</p>
+            </div>
+          </div>
+
+          <!-- Next Page Button -->
+          <button class="next-page-btn" onclick="goToPage(2)">
+            <span>Next: Family</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- PAGE 2: FAMILY NAMES -->
+      <section class="snap-page" id="page2">
+        <div class="section-box page-card">
+          <span class="section-kicker">WITH BLESSINGS OF ELDERS</span>
+          <h2 class="section-heading">Our Families</h2>
+          <div class="gold-line"><span></span> ✦ <span></span></div>
+
+          <div class="family-cards-grid">
+            <div class="fam-card">
+              <i class="fa-solid fa-crown fam-icon"></i>
+              <h3>Groom's Family</h3>
+              <p class="fam-head">MR. NOOR KHAN LATIF KHAN PATHAN</p>
+              <p class="fam-desc">&amp; Khan Family</p>
+            </div>
+            <div class="fam-card highlight-fam">
+              <i class="fa-solid fa-crown fam-icon"></i>
+              <h3>Bride's Host Family</h3>
+              <p class="fam-head">MR. YUNUS ALI MOHAMMAD ALI SAIYAD</p>
+              <p class="fam-members">
+                Awesh Saiyad • Uzaib Saiyad<br />&amp; Entire Saiyed Family
+              </p>
+            </div>
+          </div>
+
+          <button class="next-page-btn" onclick="goToPage(3)">
+            <span>Next: Save The Date</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- PAGE 3: QUOTES & DATE -->
+      <section class="snap-page" id="page3">
+        <div class="section-box page-card">
+          <span class="section-kicker">A SACRED BOND</span>
+          <h2 class="section-heading">Save The Date</h2>
+          <div class="gold-line"><span></span> ♥ <span></span></div>
+
+          <blockquote class="royal-quote">
+            “And We created you in pairs.”<br />
+            <small>— Surah An-Naba (78:8)</small>
+          </blockquote>
+
+          <div class="date-banner">
+            <div class="d-side">THURSDAY</div>
+            <div class="d-center">
+              <span class="m-txt">DECEMBER</span>
+              <span class="d-txt">10</span>
+              <span class="y-txt">2026</span>
+            </div>
+            <div class="d-side">AT 11:00 AM</div>
+          </div>
+
+          <div class="countdown-strip">
+            <div class="cd-box">
+              <span id="days">00</span><small>Days</small>
+            </div>
+            <div class="cd-box">
+              <span id="hours">00</span><small>Hours</small>
+            </div>
+            <div class="cd-box">
+              <span id="mins">00</span><small>Mins</small>
+            </div>
+            <div class="cd-box">
+              <span id="secs">00</span><small>Secs</small>
+            </div>
+          </div>
+
+          <button class="next-page-btn" onclick="goToPage(4)">
+            <span>Next: Venue Location</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- PAGE 4: LOCATION / VENUE -->
+      <section class="snap-page" id="page4">
+        <div class="section-box page-card">
+          <span class="section-kicker">WHERE TO JOIN US</span>
+          <h2 class="section-heading">Wedding Venue</h2>
+          <div class="gold-line">
+            <span></span> <i class="fa-solid fa-location-dot"></i> <span></span>
+          </div>
+
+          <div class="venue-showcase">
+            <div class="pin-pulse">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3>JILANI NAGAR</h3>
+            <p class="address-lines">
+              PLOT NO. 164, JILANI NAGAR,<br />
+              GABHENI ROAD, UNN, SURAT.
+            </p>
+            <div class="venue-time-badge">
+              <i class="fa-regular fa-clock"></i> Thursday, 10 Dec 2026 • 11:00
+              AM
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Jilani+Nagar+Gabheni+Road+Unn+Surat"
+              target="_blank"
+              class="gold-action-btn"
+            >
+              <i class="fa-solid fa-diamond-turn-right"></i> Open in Google Maps
+            </a>
+          </div>
+
+          <button class="next-page-btn" onclick="goToPage(5)">
+            <span>Next: Contacts</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- PAGE 5: CONTACT NUMBERS -->
+      <section class="snap-page" id="page5">
+        <div class="section-box page-card">
+          <span class="section-kicker">RSVP &amp; INQUIRIES</span>
+          <h2 class="section-heading">Saiyed Family Contacts</h2>
+          <div class="gold-line">
+            <span></span> <i class="fa-solid fa-phone"></i> <span></span>
+          </div>
+          <p class="contact-hint">Tap any card below to call directly</p>
+
+          <div class="contact-cards">
+            <a href="tel:9898355177" class="call-card">
+              <div class="call-icon">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="call-info">
+                <h4>YUNUS ALI SAIYAD</h4>
+                <span>+91 98983 55177</span>
+              </div>
+              <div class="call-badge">CALL</div>
+            </a>
+            <a href="tel:7405336067" class="call-card">
+              <div class="call-icon">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="call-info">
+                <h4>AWESH SAIYAD</h4>
+                <span>+91 74053 36067</span>
+              </div>
+              <div class="call-badge">CALL</div>
+            </a>
+            <a href="tel:9016242070" class="call-card">
+              <div class="call-icon">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="call-info">
+                <h4>UZAIB SAIYAD</h4>
+                <span>+91 90162 42070</span>
+              </div>
+              <div class="call-badge">CALL</div>
+            </a>
+          </div>
+
+          <footer class="web-footer">
+            <p>With Best Compliments From Saiyed Family</p>
+            <button class="footer-replay" onclick="replayAll()">
+              <i class="fa-solid fa-envelope-open-text"></i> Replay Intro
+            </button>
+          </footer>
+        </div>
+      </section>
+    </div>
+
+    <!-- Floating Page Indicator Dots -->
+    <div class="page-dots" id="pageDots" style="display: none">
+      <span class="dot active" onclick="goToPage(1)"></span>
+      <span class="dot" onclick="goToPage(2)"></span>
+      <span class="dot" onclick="goToPage(3)"></span>
+      <span class="dot" onclick="goToPage(4)"></span>
+      <span class="dot" onclick="goToPage(5)"></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
